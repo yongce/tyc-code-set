@@ -5,11 +5,11 @@
 * @author Tu Yongce <tuyongce@gmail.com>
 */
 
-#ifndef [!output FILENAME_MACRO]_INCLUDED
-#define [!output FILENAME_MACRO]_INCLUDED
+#ifndef [!output HEADER_FILE_GUARDER]
+#define [!output HEADER_FILE_GUARDER]
 
 
 
 
 
-#endif //[!output FILENAME_MACRO]_INCLUDED
+#endif //[!output HEADER_FILE_GUARDER]

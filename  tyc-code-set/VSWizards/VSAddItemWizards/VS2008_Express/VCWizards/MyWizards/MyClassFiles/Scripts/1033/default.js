@@ -26,8 +26,11 @@ function OnFinish(selProj, selObj)
 
 		wizard.AddSymbol("HEADER_FILE", headerName);
 		wizard.AddSymbol("SOURCE_FILE", sourceName);
-		var headerFileMacro = headerName.replace(/\./g, "_").toUpperCase();
-		wizard.AddSymbol("HEADER_FILE_MACRO", headerFileMacro);
+
+		var strRawGUID = wizard.CreateGuid();
+		var strFormattedGUID = wizard.FormatGuid(strRawGUID, 0);
+		var headerFileGuarder = headerName.replace(/\./g, "_").toUpperCase() + "_GUID_" +strFormattedGUID;
+		wizard.AddSymbol("HEADER_FILE_GUARDER", headerFileGuarder);
 
 		var date = new Date;
 		var dateStr = date.getYear() + "-" + (date.getMonth() + 101 + "").substr(1) + "-" + (date.getDate() + 100 + "").substr(1);
