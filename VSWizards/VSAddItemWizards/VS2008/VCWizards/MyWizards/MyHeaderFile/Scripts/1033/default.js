@@ -18,7 +18,7 @@ function OnFinish(selProj, selObj)
 
 		var strRawGUID = wizard.CreateGuid();
 		var strFormattedGUID = wizard.FormatGuid(strRawGUID, 0);
-		var headerFileGuarder = filename.replace(/\./g, "_").toUpperCase() + "_GUID_" +strFormattedGUID;
+		var headerFileGuarder = filename.replace(/\./g, "_").toUpperCase() + "_GUID_" + strFormattedGUID.replace(/-/g, "_");
 		wizard.AddSymbol("HEADER_FILE_GUARDER", headerFileGuarder);
 
 		var date = new Date;
