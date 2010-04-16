@@ -3,7 +3,7 @@
 * @brief   Header file for class UniqueNameGenerator
 * @date    2010-04-16 21:33:49
 * @author  Tu Yongce <tuyongce@gmail.com>
-* @version $Revision$ $Author$ $Date$
+* @version $LastChangedRevision$  $LastChangedBy$  $LastChangedDate$
 */
 
 

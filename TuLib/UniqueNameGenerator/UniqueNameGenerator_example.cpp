@@ -3,7 +3,7 @@
 * @brief   ÀàUniqueNameGeneratorµÄÊ¾Àý
 * @date    2010-04-16 22:06:05
 * @author  Tu Yongce <tuyongce@gmail.com>
-* @version $Revision$ $Author$ $Date$
+* @version $LastChangedRevision$  $LastChangedBy$  $LastChangedDate$
 */
 
 
