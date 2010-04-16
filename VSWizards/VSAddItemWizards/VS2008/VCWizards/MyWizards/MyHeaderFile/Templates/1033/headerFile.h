@@ -1,4 +1,4 @@
-/*!
+﻿/*!
 * @file    [!output FILENAME]
 * @brief   Header file
 * @date    [!output CREATE_DATE] [!output CREATE_TIME]
