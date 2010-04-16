@@ -1,4 +1,4 @@
-/*!
+ï»¿/*!
 * @file    UniqueNameGenerator.cpp
 * @brief   Implementation file for class UniqueNameGenerator
 * @date    2010-04-16 21:33:49
@@ -18,13 +18,13 @@ using namespace std;
 
 
 /*
-* ¹¹ÔìÒ»¸öÄÜ¹»Éú³É²»ÖØÃûµÄÃû×Ö·¢ÉúÆ÷
-* @param maxCount ÔÚÍ¬Ò»Ê±¿Ì£¨¾«È·µ½Ãë£©£¬ÏµÍ³ÄÜ¹»ÓµÓĞµÄ²»Í¬Ãû×ÖµÄ×î´ó¸öÊı
+* æ„é€ ä¸€ä¸ªèƒ½å¤Ÿç”Ÿæˆä¸é‡åçš„åå­—å‘ç”Ÿå™¨
+* @param maxCount åœ¨åŒä¸€æ—¶åˆ»ï¼ˆç²¾ç¡®åˆ°ç§’ï¼‰ï¼Œç³»ç»Ÿèƒ½å¤Ÿæ‹¥æœ‰çš„ä¸åŒåå­—çš„æœ€å¤§ä¸ªæ•°
 */
 UniqueNameGenerator::UniqueNameGenerator(size_t maxCount): 
     m_counter(0), m_maxCount(maxCount)
 {
-    // ¼ÆËã¼ÆÊıµÄÊ®½øÖÆ±íÊ¾µÄ×î´óÎ»Êı£¨¿í¶È£©
+    // è®¡ç®—è®¡æ•°çš„åè¿›åˆ¶è¡¨ç¤ºçš„æœ€å¤§ä½æ•°ï¼ˆå®½åº¦ï¼‰
     m_maxWidth = 1;
 
     if (maxCount <= 10)
@@ -47,8 +47,8 @@ UniqueNameGenerator::UniqueNameGenerator(size_t maxCount):
 
 
 /*
-* Éú³É²»ÖØÃûµÄÃû×Ö
-* @param dataTime ÊÇ·ñÔÚÃû×ÖÇ°¼ÓÉÏÏµÍ³ÈÕÆÚÓëÊ±¼ä£¨Ä¬ÈÏÌí¼Ó£¬·ñÔò¿ÉÄÜÖØÃû£©
+* ç”Ÿæˆä¸é‡åçš„åå­—
+* @param dataTime æ˜¯å¦åœ¨åå­—å‰åŠ ä¸Šç³»ç»Ÿæ—¥æœŸä¸æ—¶é—´ï¼ˆé»˜è®¤æ·»åŠ ï¼Œå¦åˆ™å¯èƒ½é‡åï¼‰
 */
 template <typename CharT>
 basic_string<CharT> UniqueNameGenerator::DoGenerateName(bool dataTime)
@@ -70,7 +70,7 @@ basic_string<CharT> UniqueNameGenerator::DoGenerateName(bool dataTime)
     if (m_maxCount > 0)
     {
         oss << setw(m_maxWidth) << m_counter;
-        // ¸üĞÂ¼ÆÊı
+        // æ›´æ–°è®¡æ•°
         m_counter = ++m_counter % m_maxCount;
     }
 

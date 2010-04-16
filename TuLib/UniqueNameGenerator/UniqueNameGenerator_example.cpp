@@ -1,6 +1,6 @@
-/*!
+ï»¿/*!
 * @file    UniqueNameGenerator_example.cpp
-* @brief   ÀàUniqueNameGeneratorµÄÊ¾Àı
+* @brief   ç±»UniqueNameGeneratorçš„ç¤ºä¾‹
 * @date    2010-04-16 22:06:05
 * @author  Tu Yongce <tuyongce@gmail.com>
 * @version $Id$
@@ -9,7 +9,7 @@
 
 /*!
 * @example UNG_example.cpp
-* ÏÂÃæÊÇÀàUniqueNameGeneratorµÄÒ»¸öÊ¾Àı¡£
+* ä¸‹é¢æ˜¯ç±»UniqueNameGeneratorçš„ä¸€ä¸ªç¤ºä¾‹ã€‚
 */
 
 #include <iostream>
@@ -99,7 +99,7 @@ void TestCase(size_t count)
     {
         if (!gen.GenerateName<CharT>(false).empty())
         {
-            // ÖØÃû
+            // é‡å
             ostringstream oss;
             oss << "File: " << __FILE__ << ", Line: " << __LINE__;
             throw runtime_error(oss.str());
@@ -117,7 +117,7 @@ void TestCase(size_t count)
         pair<Iterator, bool> ret = names.insert(oneName);
         if (!ret.second)
         {
-            // ÖØÃû
+            // é‡å
             ostringstream oss;
             oss << "File: " << __FILE__ << ", Line: " << __LINE__;
             throw runtime_error(oss.str());
@@ -129,7 +129,7 @@ void TestCase(size_t count)
     pair<Iterator, bool> ret = names.insert(oneName);
     if (ret.second)
     {
-        // Ó¦¸ÃÖØÃûÈ´Ã»ÓĞÖØÃû
+        // åº”è¯¥é‡åå´æ²¡æœ‰é‡å
         ostringstream oss;
         oss << "File: " << __FILE__ << ", Line: " << __LINE__;
         throw runtime_error(oss.str());

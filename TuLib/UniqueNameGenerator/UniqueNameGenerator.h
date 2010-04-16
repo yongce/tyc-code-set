@@ -1,4 +1,4 @@
-/*!
+ï»¿/*!
 * @file    UniqueNameGenerator.h
 * @brief   Header file for class UniqueNameGenerator
 * @date    2010-04-16 21:33:49
@@ -20,8 +20,8 @@
 
 
 /*!
-* @brief   ÀàUniqueNameGeneratorÌá¹©²»ÖØÃûµÄÃû×ÖÉú³É·şÎñ
-* @details Éú³ÉµÄÃû×ÖµÄÃüÃû¹æÔòÎª£º[ÏµÍ³ÈÕÆÚ + ÏµÍ³Ê±¼ä + ¼ÆÊı]
+* @brief   ç±»UniqueNameGeneratoræä¾›ä¸é‡åçš„åå­—ç”ŸæˆæœåŠ¡
+* @details ç”Ÿæˆçš„åå­—çš„å‘½åè§„åˆ™ä¸ºï¼š[ç³»ç»Ÿæ—¥æœŸ + ç³»ç»Ÿæ—¶é—´ + è®¡æ•°]
 */
 class UniqueNameGenerator
 {
@@ -32,16 +32,16 @@ private:
 
 public:
     /*!
-    * @brief ¹¹ÔìÒ»¸öÄÜ¹»Éú³É²»ÖØÃûµÄÃû×Ö·¢ÉúÆ÷
-    * @param maxCount ÔÚÍ¬Ò»Ê±¿Ì£¨¾«È·µ½Ãë£©£¬ÏµÍ³ÄÜ¹»ÓµÓĞµÄ²»Í¬Ãû×ÖµÄ×î´ó¸öÊı
+    * @brief æ„é€ ä¸€ä¸ªèƒ½å¤Ÿç”Ÿæˆä¸é‡åçš„åå­—å‘ç”Ÿå™¨
+    * @param maxCount åœ¨åŒä¸€æ—¶åˆ»ï¼ˆç²¾ç¡®åˆ°ç§’ï¼‰ï¼Œç³»ç»Ÿèƒ½å¤Ÿæ‹¥æœ‰çš„ä¸åŒåå­—çš„æœ€å¤§ä¸ªæ•°
     */
     UniqueNameGenerator(size_t maxCount = 10000);
 
     /*!
-    * @brief Éú³É²»ÖØÃûµÄÃû×Ö
-    * @tparam CharT ×Ö·ûÀàĞÍ£¬µ±Ç°Ö»Ö§³ÖcharºÍwchar_tÁ½ÖÖÀàĞÍ
-    * @param dataTime ÊÇ·ñÔÚÃû×ÖÇ°¼ÓÉÏÏµÍ³ÈÕÆÚÓëÊ±¼ä£¨Ä¬ÈÏÌí¼Ó£¬·ñÔò¿ÉÄÜÖØÃû£©
-    * @return ·µ»ØÉú³ÉµÄÃû×Ö
+    * @brief ç”Ÿæˆä¸é‡åçš„åå­—
+    * @tparam CharT å­—ç¬¦ç±»å‹ï¼Œå½“å‰åªæ”¯æŒcharå’Œwchar_tä¸¤ç§ç±»å‹
+    * @param dataTime æ˜¯å¦åœ¨åå­—å‰åŠ ä¸Šç³»ç»Ÿæ—¥æœŸä¸æ—¶é—´ï¼ˆé»˜è®¤æ·»åŠ ï¼Œå¦åˆ™å¯èƒ½é‡åï¼‰
+    * @return è¿”å›ç”Ÿæˆçš„åå­—
     */
     template <typename CharT>
     std::basic_string<CharT> GenerateName(bool dataTime = true);  // not implemented!!!
