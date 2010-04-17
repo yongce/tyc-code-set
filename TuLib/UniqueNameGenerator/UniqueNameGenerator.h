@@ -11,8 +11,8 @@
 #define UNIQUENAMEGENERATOR_H_GUID_78C7CAB6_77EF_448E_8ABF_3AC6F1DA1D02
 
 
-#ifndef _MSC_VER
-#error Only works with VC compiler. Because the function localtime_s() from VC is invoked.
+#if !defined(_MSC_VER) && !(defined(__GNUC__) && !defined(__MINGW32__))
+#error Currently only works with VC++ and GCC (not including MinGW-GCC).
 #endif
 
 

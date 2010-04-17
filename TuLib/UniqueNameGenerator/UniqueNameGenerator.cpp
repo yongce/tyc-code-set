@@ -61,7 +61,15 @@ basic_string<CharT> UniqueNameGenerator::DoGenerateName(bool dataTime)
     {
         time_t curTime = time(0);
         struct tm now;
+
+#if defined(_MSC_VER)
         localtime_s(&now, &curTime);
+#elif defined(__GNUC__) && !defined(__MINGW32__)
+        localtime_r(&curTime, &now);
+#else
+#       error Currently only works with VC++ and GCC (not including MinGW-GCC).
+#endif
+
         oss << setw(4) << (now.tm_year + 1900) << setw(2) << (now.tm_mon + 1)
             << setw(2) << now.tm_mday << delimiter << setw(2) << now.tm_hour 
             << setw(2) << now.tm_min << setw(2) << now.tm_sec << delimiter;
